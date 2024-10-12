@@ -6,7 +6,8 @@ namespace BuilderAPIs.Domain.Entities
     {
         [Key]
         public int ComponentID { get; set; }
-        public string ComponentName { get; set; } = string.Empty;
+        public string ComponentNameEsp { get; set; } = string.Empty;
+        public string ComponentNameEn { get; set; } = string.Empty;
         public string ComponentImage { get; set; } = string.Empty;
         public int FrameworkID {  get; set; }
         public int CategoryID { get; set; }

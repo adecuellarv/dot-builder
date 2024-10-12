@@ -6,6 +6,7 @@ namespace BuilderAPIs.Domain.Entities
     {
         [Key]
         public int CategoryId { get; set; }
-        public string CategoryName { get; set; } = string.Empty;
+        public string CategoryNameEsp { get; set; } = string.Empty;
+        public string CategoryNameEn { get; set; } = string.Empty;
     }
 }

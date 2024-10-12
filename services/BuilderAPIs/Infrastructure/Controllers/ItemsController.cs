@@ -27,11 +27,11 @@ namespace BuilderAPIs.Infrastructure.Controllers
 
         // GET api/<ItemsController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Items>> GetItemById(int id)
+        public async Task<ActionResult<Items>> GetItemById(string id)
         {
-            var item = await _itemsRepository.GetItemByIdAsync(id);
-            if (item == null) return NotFound();
-            return Ok(item);
+            var items = await _itemsRepository.GetItemByIdAsync(id);
+            if (items == null || !items.Any()) return NotFound();
+            return Ok(items);
         }
 
         // POST api/<ItemsController>

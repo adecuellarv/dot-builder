@@ -20,9 +20,9 @@ public class ItemsRepository : IItemsRepository
         return await _context.Items.ToListAsync();
     }
 
-    public async Task<Items> GetItemByIdAsync(int id)
+    public async Task<List<Items>> GetItemByIdAsync(string id)
     {
-        return await _context.Items.FindAsync(id);
+        return await _context.Items.Where(item => item.UserId == id).ToListAsync();
     }
 
     public async Task<Items> AddItemAsync(Items item)

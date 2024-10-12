@@ -5,7 +5,7 @@ namespace BuilderAPIs.Domain.Interfaces
     public interface IItemsRepository
     {
         Task<List<Items>> GetItemsAsync();
-        Task<Items> GetItemByIdAsync(int id);
+        Task<List<Items>> GetItemByIdAsync(String id);
         Task<Items> AddItemAsync(Items item);
         Task<Items> UpdateItemAsync(Items item);
         Task<bool> DeleteItemAsync(int id);

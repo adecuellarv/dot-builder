@@ -18,6 +18,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddMediatR(typeof(Program)); // O especifica el ensamblado si es necesario
 
 builder.Services.AddScoped<IItemsRepository, ItemsRepository>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 
 var app = builder.Build();
 

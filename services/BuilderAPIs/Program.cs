@@ -19,6 +19,7 @@ builder.Services.AddMediatR(typeof(Program)); // O especifica el ensamblado si e
 
 builder.Services.AddScoped<IItemsRepository, ItemsRepository>();
 builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
+builder.Services.AddScoped<IComponentsRepository, ComponentsRepository>();
 
 var app = builder.Build();
 

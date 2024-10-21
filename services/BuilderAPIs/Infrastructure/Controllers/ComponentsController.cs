@@ -24,10 +24,10 @@ namespace BuilderAPIs.Infrastructure.Controllers
         }
 
         // GET api/<ComponentsController>/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Items>> GetComponentsById(string id)
+        [HttpGet("{id}/{frontid}")]
+        public async Task<ActionResult<Items>> GetComponentsById(string id, string frontid)
         {
-            var items = await _componentsRepository.GetComponentByIdAsync(int.Parse(id));
+            var items = await _componentsRepository.GetComponentByIdAsync(int.Parse(id), int.Parse(frontid));
             if (items == null || !items.Any()) return NotFound();
             return Ok(items);
         }

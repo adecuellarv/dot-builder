@@ -14,9 +14,9 @@ public class ComponentsRepository : IComponentsRepository {
         _mediator = mediator;
     }
 
-    public async Task<List<Components>> GetComponentByIdAsync(int id)
+    public async Task<List<Components>> GetComponentByIdAsync(int id, int frontid)
     {
-        return await _context.Components.Where(item => item.CategoryID == id).ToListAsync();
+        return await _context.Components.Where(item => item.CategoryID == id && item.FrameworkID == frontid).ToListAsync();
     }
 
 }

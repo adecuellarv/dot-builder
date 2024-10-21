@@ -1,0 +1,20 @@
+
+{
+    "region" : "us-east-2",
+    "configuration" : "Debug",
+    "framework"     : "net8.0",
+    "self-contained" : true,
+    "application"    : "buildernet-fromnet",
+    "environment"    : "buildernet-fromnet-env",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-048263d0b25ca3c66\";\"aws:ec2:vpc,Subnets\"=\"subnet-0c5d5e9c4890b3ebd\"",
+    "solution-stack"       : "64bit Amazon Linux 2 v2.8.3 running .NET Core",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "buildernet-fromnet-env",
+    "instance-type"        : "t3a.medium",
+    "key-pair"             : "",
+    "instance-profile"     : "visualrole",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx"
+}
